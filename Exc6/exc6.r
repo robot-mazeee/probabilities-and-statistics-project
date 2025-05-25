@@ -42,10 +42,10 @@ cat("Simulated proportion (P(Sn <= 5.75)):", pn_sim, "\n")
 
 # Calculate absolute deviations
 
-abs_deviation_clt <- abs(pn - pn_clt)
+abs_deviation_clt = abs(pn - pn_clt)
 cat("Absolute deviation between exact pn and CLT approximation:", abs_deviation_clt, "\n")
 
-abs_deviation_sim <- abs(pn - pn_sim)
+abs_deviation_sim = abs(pn - pn_sim)
 cat("Absolute deviation between exact pn and sim approximation:", abs_deviation_sim, "\n")
 
 # Calculate absolute deviations quotient
