@@ -7,4 +7,3 @@ k = 6
 full_sample = scan("Exc10/sample.txt", sep = ",")
 subsample = sample(full_sample, size = 160, replace = FALSE)
 
-
