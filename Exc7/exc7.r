@@ -12,7 +12,9 @@ score_function = function(alpha) {
 
 # Maximum likelihood estimates
 estimated_alpha = uniroot(score_function, interval = c(0.001, 169.8))$root
+cat("Maximum likelihood alpha estimate:", estimated_alpha, '\n')
 estimated_lambda = estimated_alpha / xi_mean
+cat("Maximum likelihood lambda estimate:", estimated_lambda, '\n')
 
 mode = round((estimated_alpha - 1) / estimated_lambda, 2)
-print(mode)
+cat("Modal length:", mode, '\n')
