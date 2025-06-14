@@ -20,8 +20,9 @@ accept_H0 = T0 <= crit_value
 
 # Beta estimate
 beta_hat = mean(accept_H0)
+
 # Beta theoretical value
-beta = pgamma(crit_value, shape = 2 * n, rate = mu0 / mu1)
+beta = pchisq(crit_value*(mu0/mu1), df = 2*n)
 
 quotient = round(beta_hat / beta, 4)
-print(quotient)
+cat("Quotient between estimate and theoretical beta:", quotient, '\n')
